@@ -9,8 +9,6 @@ export function App() {
 	return (
 		<ThemeProvider theme={defaultTheme}>
 			<BrowserRouter>
-				{/* quando passar um componentes dentro do context adicionar children nele */}
-
 				<Router />
 			</BrowserRouter>
 			<GlobalStyle />
