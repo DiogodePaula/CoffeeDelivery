@@ -1,9 +1,10 @@
-import { Banner, HomeContainer, IconAndText } from "./styles";
+import { Banner, BannerImage, CoffeeTypesContainer, HomeContainer, IconAndText } from "./styles";
 import imgHome from "../../assets/home-presentation.png";
 import purchase from "../../assets/banner-home/purchase.svg";
 import delivery from "../../assets/banner-home/delivery.svg";
 import coffee from "../../assets/banner-home/coffee.svg";
 import packaging from "../../assets/banner-home/packaging.svg";
+import { Card } from "../../components/Card";
 
 export function Home() {
 	return (
@@ -35,11 +36,14 @@ export function Home() {
 						</IconAndText>
 					</article>
 				</div>
-				<figure>
-					<img src={imgHome} alt="Copo de cafe" />
-					{/* <figcaption>Descrição da imagem</figcaption> */}
-				</figure>
+				<BannerImage src={imgHome} alt="Copo de cafe" />
 			</Banner>
+			<div>
+				<h1>Nossos cafés</h1>
+				<CoffeeTypesContainer>
+					<Card />
+				</CoffeeTypesContainer>
+			</div>
 		</HomeContainer>
 	);
 }

@@ -3,13 +3,14 @@ import styled from "styled-components";
 export const HomeContainer = styled.main`
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+
 	margin-top: 7.8rem;
 `;
 
 export const Banner = styled.div`
+	width: 100%;
 	display: flex;
+	justify-content: space-between;
 	min-height: 544px;
 
 	div {
@@ -23,13 +24,18 @@ export const Banner = styled.div`
 
 		h3 {
 			font-size: 1.2rem;
-			margin-bottom: 2.5rem;
+			margin-bottom: 6rem;
 		}
 
 		article {
 			display: flex;
 		}
 	}
+`;
+
+export const BannerImage = styled.img`
+	width: 50%;
+	max-height: 28rem;
 `;
 
 export const IconAndText = styled.div`
@@ -41,4 +47,8 @@ export const IconAndText = styled.div`
 		gap: 8px;
 		margin-bottom: 1.2rem;
 	}
+`;
+
+export const CoffeeTypesContainer = styled.div`
+	margin: 3rem 0 10rem 0;
 `;
