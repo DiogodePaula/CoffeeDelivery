@@ -5,6 +5,13 @@ export const HomeContainer = styled.main`
 	flex-direction: column;
 
 	margin-top: 7.8rem;
+
+	.titleCoffeeTypes {
+		font-family: "Baloo 2";
+		font-size: 2rem;
+		font-weight: 800;
+		color: ${(props) => props.theme["brown-900"]};
+	}
 `;
 
 export const Banner = styled.div`
@@ -18,8 +25,10 @@ export const Banner = styled.div`
 
 		h1 {
 			font-family: "Baloo 2";
+			color: ${(props) => props.theme["brown-900"]};
 			font-size: 3rem;
 			font-weight: 800;
+			line-height: 3.9rem;
 		}
 
 		h3 {
@@ -35,7 +44,7 @@ export const Banner = styled.div`
 
 export const BannerImage = styled.img`
 	width: 50%;
-	max-height: 28rem;
+	max-height: 24rem;
 `;
 
 export const IconAndText = styled.div`
@@ -51,4 +60,8 @@ export const IconAndText = styled.div`
 
 export const CoffeeTypesContainer = styled.div`
 	margin: 3rem 0 10rem 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 11fr;
+	grid-column-gap: 2rem;
+	grid-row-gap: 2.5rem;
 `;

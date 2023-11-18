@@ -5,6 +5,7 @@ import delivery from "../../assets/banner-home/delivery.svg";
 import coffee from "../../assets/banner-home/coffee.svg";
 import packaging from "../../assets/banner-home/packaging.svg";
 import { Card } from "../../components/Card";
+import coffeeTypes from "../../../imagens.json";
 
 export function Home() {
 	return (
@@ -39,9 +40,11 @@ export function Home() {
 				<BannerImage src={imgHome} alt="Copo de cafe" />
 			</Banner>
 			<div>
-				<h1>Nossos cafés</h1>
+				<h1 className="titleCoffeeTypes">Nossos cafés</h1>
 				<CoffeeTypesContainer>
-					<Card />
+					{coffeeTypes.map((coffee) => {
+						return <Card key={coffee} image={coffee} />;
+					})}
 				</CoffeeTypesContainer>
 			</div>
 		</HomeContainer>
